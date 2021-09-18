@@ -1,8 +1,10 @@
 import axios from 'axios'
 
+const APP_ID = process.env.REACT_APP_APP_ID
+
 const header = {
     headers: {
-        'app-id': '6144ab3696ad280a8d68008e'
+        'app-id': `${APP_ID}`
     }
 }
 

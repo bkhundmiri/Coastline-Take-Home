@@ -28,23 +28,20 @@ const Profile = () => {
         <Post key={index} post={post}/>
     ))
 
-    console.log(userData);
-    console.log(userPosts);
-
     return (
-        <div>
-            {!userData ? (
-                    <div>Loading</div>
-                ) : (
+        <>
+            {userData ? (
                     <div>
                         <div>{userData.firstName} {userData.lastName}</div>
                         <div>{userData.phone}</div>
                         <div>{userData.email}</div>
                         {postJSX}
                     </div>
+                ) : (
+                    <div>Loading</div>
                 )
             }
-        </div>
+        </>
     )
 }
 
