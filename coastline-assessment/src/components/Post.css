@@ -1,0 +1,12 @@
+.post-img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.post-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
