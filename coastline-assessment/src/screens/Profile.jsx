@@ -8,6 +8,7 @@ const Profile = () => {
     const [userPosts, setUserPosts] = useState([])
     const { id } = useParams()
 
+    //One user fetch
     useEffect(() => {
         const fetchUserData = async () => {
             const userData = await getUser(id)
@@ -16,6 +17,7 @@ const Profile = () => {
         fetchUserData()
     }, [id])
 
+    //Posts fetch
     useEffect(() => {
         const fetchUserPostData = async () => {
             const userPosts = await getPosts(id)
@@ -24,6 +26,7 @@ const Profile = () => {
         fetchUserPostData()
     }, [id])
 
+    //Post constructor
     const postJSX = userPosts.map((post, index) => (
         <Post key={index} post={post}/>
     ))
@@ -32,6 +35,7 @@ const Profile = () => {
         <>
             {userData ? (
                     <div>
+                        <img src={userData.picture} alt="profile-pic" />
                         <div>{userData.firstName} {userData.lastName}</div>
                         <div>{userData.phone}</div>
                         <div>{userData.email}</div>

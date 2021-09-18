@@ -7,6 +7,7 @@ const Home = () => {
     const [usersData, setUsersData] = useState([])
     const [queriedUsersData, setQueriedUsersData] = useState([])
 
+    
     //Get Request for Data
     useEffect(() => {
         const fetchUsers = async () => {
@@ -15,6 +16,7 @@ const Home = () => {
         }
         fetchUsers()
     }, [])
+
 
     // Search Function
     const handleSearch = (e) => {
@@ -26,13 +28,14 @@ const Home = () => {
     }
     const handleSubmit = (e) => e.preventDefault()
 
+
     //All users constructor
     const usersJSX = usersData.map((user, index) => (
-        <User key={index} user={user}/>
+        <User key={index} user={user} usersData={usersData} setUsersData={setUsersData}/>
     ))
     //Queried users constructor
     const queriedUsersJSX = queriedUsersData.map((user, index) => (
-        <User key={index} user={user}/>
+        <User key={index} user={user} usersData={usersData} setUsersData={setUsersData}/>
     ))
 
     return (

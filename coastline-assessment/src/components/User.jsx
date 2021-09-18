@@ -1,13 +1,22 @@
 import { Link } from "react-router-dom"
 
-const User = ({ user }) => {
+const User = ({ user, usersData, setUsersData }) => {
+
+    const handleDelete = () => {
+        const updatedUsersData = usersData.filter((users) => users.id !== user.id)
+        setUsersData(updatedUsersData)
+    }
+
     return (
-        <Link to={`/user/${user.id}`}>
-            <div>
-                <img src={user.picture} alt='profile-pic'/>
-                {user.firstName} {user.lastName}
-            </div>
-        </Link>
+        <div>
+            <Link to={`/user/${user.id}`}>
+                <div>
+                    <img src={user.picture} alt='profile-pic'/>
+                    {user.firstName} {user.lastName}
+                </div>
+            </Link>
+                <button onClick={handleDelete}>Delete</button>
+        </div>
     )
 }
 
