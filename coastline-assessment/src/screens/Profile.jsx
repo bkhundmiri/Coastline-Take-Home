@@ -3,6 +3,8 @@ import { useParams } from "react-router"
 import Post from "../components/Post"
 import { getPosts, getUser } from "../services/crud"
 
+import "./Profile.css"
+
 const Profile = () => {
     const [userData, setUserData] = useState({})
     const [userPosts, setUserPosts] = useState([])
@@ -34,13 +36,19 @@ const Profile = () => {
     return (
         <>
             {userData ? (
-                    <div>
-                        <img src={userData.picture} alt="profile-pic" />
-                        <div>{userData.firstName} {userData.lastName}</div>
-                        <div>{userData.phone}</div>
-                        <div>{userData.email}</div>
-                        {postJSX}
-                    </div>
+                    <>
+                        <div className="profile-user-container">
+                            <img className="profile-user-img" src={userData.picture} alt="profile-pic" />
+                            <div className="profile-user-details">
+                                <div>{userData.firstName} {userData.lastName}</div>
+                                <div>Phone: {userData.phone}</div>
+                                <div>Email: {userData.email}</div>
+                            </div>
+                        </div>
+                        <div className="profile-posts-container">
+                            {postJSX}   
+                        </div>
+                    </>
                 ) : (
                     <div>Loading</div>
                 )

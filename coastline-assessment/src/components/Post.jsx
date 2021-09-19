@@ -2,11 +2,11 @@ import "./Post.css"
 
 const Post = ({ post }) => {
     return (
-        <div className='post-container'>
+        <div className='post-card'>
             <img src={post.image} alt="user-post" className='post-img'/>
-            <div>
+            <div className='post-details'>
                 <div>{post.text}</div>
-                <div>{post.likes}</div>
+                <div>Likes: {post.likes}</div>
             </div>
         </div>
     )

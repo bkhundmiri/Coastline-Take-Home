@@ -1,0 +1,28 @@
+.profile-user-container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 700px;
+    height: 150px;
+    justify-content: space-evenly;
+    background-color: plum;
+    margin: 50px 0;
+    padding: 20px 0;
+}
+
+.profile-user-details {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.profile-user-img {
+    height: 150px;
+    width: 150px;
+}
+
+.profile-posts-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}

@@ -1,6 +1,8 @@
 .post-img {
     max-width: 200px;
     max-height: 200px;
+    position: absolute;
+    top: 10px;
 }
 
 .post-container {
@@ -10,3 +12,22 @@
     margin: 10px 0;
 }
 
+.post-card {
+    display: flex;
+    flex-flow:column;
+    width: 350px;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: plum;
+    position: relative;
+}
+
+.post-details {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    bottom: 0;
+
+}

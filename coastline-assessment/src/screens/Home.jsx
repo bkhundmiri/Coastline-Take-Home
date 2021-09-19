@@ -3,6 +3,8 @@ import { getUsers } from "../services/crud";
 import User from "../components/User"
 import Search from "../components/Search";
 
+import "./Home.css"
+
 const Home = () => {
     const [usersData, setUsersData] = useState([])
     const [queriedUsersData, setQueriedUsersData] = useState([])
@@ -20,11 +22,11 @@ const Home = () => {
 
     // Search Function
     const handleSearch = (e) => {
-        const queriedUsersData = usersData.filter((user) => {
+        const queriedUserData = usersData.filter((user) => {
             const fullName = user.firstName + user.lastName;
             return fullName.toLowerCase().includes(e.target.value.toLowerCase())
         })
-        setQueriedUsersData(queriedUsersData)
+        setQueriedUsersData(queriedUserData)
     }
     const handleSubmit = (e) => e.preventDefault()
 
@@ -45,7 +47,7 @@ const Home = () => {
                 ) : (
                     <div>
                         <Search onSubmit={handleSubmit} onChange={handleSearch} />
-                        <div>{queriedUsersData.length? queriedUsersJSX: usersJSX}</div>
+                        <div className="users-container">{queriedUsersData.length? queriedUsersJSX: usersJSX}</div>
                     </div>
                 )
             }

@@ -1,0 +1,23 @@
+.user-card {
+    display: flex;
+    width: 350px;
+    height: 100px;
+    background-color: lightpink;
+    margin: 10px 20px;
+    justify-content: space-between;
+}
+
+.user-profile {
+    width: 100px;
+    height: 100px;
+}
+
+.user-card-details {
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.user-fullname {
+    padding-left: 10px;
+}

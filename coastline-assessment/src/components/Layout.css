@@ -20,6 +20,9 @@ nav, footer {
 
 .props-children-container {
     min-height: 88vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center
 } 
 
 footer {

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 
+import './User.css'
+
 const User = ({ user, usersData, setUsersData }) => {
 
     const handleDelete = () => {
@@ -8,11 +10,11 @@ const User = ({ user, usersData, setUsersData }) => {
     }
 
     return (
-        <div>
+        <div className="user-card">
             <Link to={`/user/${user.id}`}>
-                <div>
-                    <img src={user.picture} alt='profile-pic'/>
-                    {user.firstName} {user.lastName}
+                <div className="user-card-details">
+                    <img className="user-profile" src={user.picture} alt='profile-pic'/>
+                    <div className="user-fullname">{user.firstName} {user.lastName}</div>
                 </div>
             </Link>
                 <button onClick={handleDelete}>Delete</button>
