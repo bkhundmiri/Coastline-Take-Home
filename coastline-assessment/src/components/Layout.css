@@ -1,0 +1,31 @@
+nav, footer {
+    background-color: pink;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 6vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-name, .app-footer {
+    padding: 0 20px;
+    position: absolute;
+    left: 0;
+}
+
+.home-nav {
+    justify-self: center;
+    align-self: center;
+}
+
+.props-children-container {
+    min-height: 88vh;
+} 
+
+footer {
+    justify-content: flex-end;
+}
+
+.app-copyright {
+    padding-right: 20px;
+}
