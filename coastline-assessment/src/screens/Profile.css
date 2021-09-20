@@ -27,3 +27,12 @@
     justify-content: space-evenly;
     max-width: 800px;
 }
+
+@media all and (max-width: 768px) {
+    .profile-user-container {
+        width: 100vw;
+    }
+    .profile-user-details {
+        align-items: center;
+    }
+}
