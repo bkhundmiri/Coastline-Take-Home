@@ -2,7 +2,6 @@ import "./Search.css"
 
 const Search = (props) => {
   return (
-    <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
       <div className="search-wrapper">
         <input
           className="search-bar"
@@ -14,7 +13,6 @@ const Search = (props) => {
           autoFocus
         />
       </div>
-    </form>
   );
 };
 

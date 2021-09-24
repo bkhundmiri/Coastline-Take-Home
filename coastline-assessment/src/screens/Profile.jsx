@@ -35,7 +35,7 @@ const Profile = () => {
 
     return (
         <>
-            {userData ? (
+            {userData.firstName ? (
                     <>
                         <div className="profile-user-container">
                             <img className="profile-user-img" src={userData.picture} alt="profile-pic" />
